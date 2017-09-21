@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+ Homework section.
+int main()
+{
+    char Input ='A';
+    int length=0;
+//    do//"Do while" part
+//    {
+//        cin.get(Input);
+//        length++;
+//    }
+//    while(Input != '\n');
+
+  while(Input != '\n'Z)//"While" part
+  {
+      cin.get(Input);
+      length=length+1;
+  }
+    cout << length<< "\n" << Input <<  endl;
+    return 0;
+
+}

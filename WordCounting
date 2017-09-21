@@ -1,0 +1,39 @@
+#include <iostream>
+#define IN 1
+#define OUT 0
+
+using namespace std;
+
+
+int main()
+{
+    char Input;
+    int NumWord,NumLine,NumChar,state;
+    NumWord=NumLine=NumChar=0;
+
+    state=OUT;
+
+    while(cin.get(Input))
+    {
+        ++NumChar;
+        if(Input == '\n')
+        {
+            ++NumLine;
+        }
+
+        if(Input == ' ' || Input == '\n' || Input == '\t')
+        {
+            state=OUT;
+        }
+
+        else if (state==OUT)
+        {
+            state=IN;
+            ++NumWord;
+        }
+    }
+
+     cout <<NumChar<<"  "<<NumLine<<"  "<<NumWord<<"  "<< endl;
+
+    return 0;
+}
