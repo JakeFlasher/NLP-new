@@ -9,5 +9,10 @@ echo -n 'Conda version: '
 echo -e '\n'
 exec bash
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-conda env reate -f environment.yaml
-
+# conda env reate -f environment.yaml
+conda create --name tf2 python=3.7 
+conda activate tf2  
+conda install -c anaconda seaborn
+conda install matplotlib
+pip install --upgrade tensorflow
+pip install wordcloud
